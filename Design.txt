@@ -1,0 +1,6 @@
+Bear
+Coyote
+wolf
+Snake
+Rabbit
+Deer
