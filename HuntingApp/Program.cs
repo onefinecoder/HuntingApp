@@ -24,7 +24,7 @@ namespace HuntingApp
             //making a variable and capturing the data from the user
             string userInput = Console.ReadLine();
 
-            //Print out the username
+            //Print out the usernamemmnm n  
             Console.WriteLine("Hello:" + userInput);
 
 
@@ -40,6 +40,7 @@ namespace HuntingApp
 
             Console.WriteLine("player1 Username:" + player1.Username);
             Console.WriteLine("player1 Score:" + player1.Score);
+            Console.WriteLine("player1 Health:" + player1.Health);
             #endregion
 
 
@@ -54,6 +55,8 @@ namespace HuntingApp
             Console.WriteLine("player1 Score:" + player1.Score);
 
 
+            player1.Health = player1.Health - animal1.DamageDealt;
+            Console.WriteLine("player1 Health:" + player1.Health);
 
 
 
@@ -63,8 +66,11 @@ namespace HuntingApp
             Console.WriteLine("animal2 Score:" + animal2.Points);
 
             player1.Score = player1.Score + animal2.Points;
+            player1.Health = player1.Health - animal1.DamageDealt;
 
             Console.WriteLine("player1 Score:" + player1.Score);
+            Console.WriteLine("player1 Health:" + player1.Health);
+
         }
     }
 }
