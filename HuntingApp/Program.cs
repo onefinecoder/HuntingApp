@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+
 
 namespace HuntingApp
 {
@@ -71,6 +73,10 @@ namespace HuntingApp
 
             }
 
+            string now = DateTime.Now.ToString("yyyyMMddHHmmsss");
+
+            string filename ="HuntingApp" + now + ".txt";
+
             Console.WriteLine("******************************************************************************************************************");
                 Console.WriteLine("FINAL REPORT CARD");
             Console.WriteLine("-------------------------------------------");
@@ -82,6 +88,24 @@ namespace HuntingApp
 
 
             }
+            using (StreamWriter outputfile = new StreamWriter(filename))
+            {
+                
+                outputfile.WriteLine("******************************************************************************************************************");
+                outputfile.WriteLine("FINAL REPORT CARD");
+                outputfile.WriteLine("-------------------------------------------");
+                outputfile.WriteLine("Date:" + now);
+                outputfile.WriteLine("Username:" + player1.Username);
+                outputfile.WriteLine("Score:" + player1.Score);
+                outputfile.WriteLine("Health:" + player1.Health);
+                if (player1.Health <= 0)
+                {
+                    outputfile.WriteLine("YOU DIED OH NO!!!!!!!!!");
+
+
+                }
+            }
+
             //Animal animal1 = game.CatchAnimal();
 
             //Console.WriteLine("animal1 AnimalType:" + animal1.AnimalType);
