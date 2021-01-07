@@ -23,32 +23,32 @@ namespace HuntingApp
             {
                 animal.AnimalType = "Coyote";
                 animal.Points = 10;
-                animal.DamageDealt = 30;
+                animal.DamageDealt = 25;
             }
             else if (r == 2) //
             {
                 animal.AnimalType = "Rabbit";
                 animal.Points = 2;
-                animal.DamageDealt = 1;
+                animal.DamageDealt = 2;
             }
             else if (r == 3)
             {
                 animal.AnimalType = "Wolf";
                 animal.Points = 20;
-                animal.DamageDealt = 60;
+                animal.DamageDealt = 20;
 
             }
             else if (r == 4)
             {
                 animal.AnimalType = "Deer";
                 animal.Points = 5;
-                animal.DamageDealt = 1;
+                animal.DamageDealt = 3;
             }
             else if (r == 5)
             {
                 animal.AnimalType = "Bear";
                 animal.Points = 30;
-                animal.DamageDealt = 70;
+                animal.DamageDealt = 30;
             }
             else
             {

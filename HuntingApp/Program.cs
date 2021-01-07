@@ -45,31 +45,68 @@ namespace HuntingApp
 
 
             GameEngine game = new GameEngine();
-            Animal animal1 = game.CatchAnimal();
 
-            Console.WriteLine("animal1 AnimalType:" + animal1.AnimalType);
-            Console.WriteLine("animal1 Score:" + animal1.Points);
+            for(int i = 1; i<=10; i++)
+            {
+                Animal animal1 = game.CatchAnimal();
+                Console.WriteLine("animal" + i + " AnimalType:" + animal1.AnimalType);
+                Console.WriteLine("animal" + i + " Score:" + animal1.Points);
+                Console.WriteLine("animal" + i + " DamageDealt:" + animal1.DamageDealt);
 
-            player1.Score = player1.Score + animal1.Points;
+                player1.Score = player1.Score + animal1.Points;
 
-            Console.WriteLine("player1 Score:" + player1.Score);
-
-
-            player1.Health = player1.Health - animal1.DamageDealt;
-            Console.WriteLine("player1 Health:" + player1.Health);
-
+                Console.WriteLine("   Score:" + player1.Score);
 
 
-            Animal animal2 = game.CatchAnimal();
+                player1.Health = player1.Health - animal1.DamageDealt;
+                Console.WriteLine("   Health:" + player1.Health);
 
-            Console.WriteLine("anmal2 AnimalType:" + animal2.AnimalType);
-            Console.WriteLine("animal2 Score:" + animal2.Points);
 
-            player1.Score = player1.Score + animal2.Points;
-            player1.Health = player1.Health - animal1.DamageDealt;
+                if (player1.Health <= 0)
+                {
+                    Console.WriteLine("YOU DIED OH NO!!!!!!!!!");
+                    break;
 
-            Console.WriteLine("player1 Score:" + player1.Score);
-            Console.WriteLine("player1 Health:" + player1.Health);
+                }
+
+            }
+
+            Console.WriteLine("******************************************************************************************************************");
+                Console.WriteLine("FINAL REPORT CARD");
+            Console.WriteLine("-------------------------------------------");
+            Console.WriteLine("Score:" + player1.Score);
+            Console.WriteLine("Health:" + player1.Health);
+            if (player1.Health <= 0)
+            {
+                Console.WriteLine("YOU DIED OH NO!!!!!!!!!");
+
+
+            }
+            //Animal animal1 = game.CatchAnimal();
+
+            //Console.WriteLine("animal1 AnimalType:" + animal1.AnimalType);
+            //Console.WriteLine("animal1 Score:" + animal1.Points);
+
+            //player1.Score = player1.Score + animal1.Points;
+
+            //Console.WriteLine("player1 Score:" + player1.Score);
+
+
+            //player1.Health = player1.Health - animal1.DamageDealt;
+            //Console.WriteLine("player1 Health:" + player1.Health);
+
+
+
+            //Animal animal2 = game.CatchAnimal();
+
+            //Console.WriteLine("anmal2 AnimalType:" + animal2.AnimalType);
+            //Console.WriteLine("animal2 Score:" + animal2.Points);
+
+            //player1.Score = player1.Score + animal2.Points;
+            //player1.Health = player1.Health - animal1.DamageDealt;
+
+            //Console.WriteLine("player1 Score:" + player1.Score);
+            //Console.WriteLine("player1 Health:" + player1.Health);
 
         }
     }
